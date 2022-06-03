@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent any
     options { 
         timeout(time: 1, unit: 'HOURS')
     }
@@ -8,6 +8,7 @@ pipeline {
             steps {
                 script {
                     git branch: "master",
+                        credentialsId: 'MANOJ_PYTHON',
                         url: 'https://github.com/ma1456/python.git'
                 }
             }
