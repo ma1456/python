@@ -1,5 +1,8 @@
 pipeline {
     agent {
+        node {
+            { label 'JDK8' }
+        }
     }
     stages {
         stage('Checkout project') {
