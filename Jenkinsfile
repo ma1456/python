@@ -32,8 +32,8 @@ pipeline {
                 script {
                     sh 'pytest --with-xunit --xunit-file=pyunit.xml --cover-xml --cover-xml-file=cov.xml tests/*.py || true'
                     junit "pyunit.xml"
+                }
             }
         }
-    }
-       
+    }   
 }    
