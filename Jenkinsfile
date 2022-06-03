@@ -1,5 +1,5 @@
 pipeline {
-    agent { label'JDK8' }
+    agent any 
     options { 
         timeout(time: 1, unit: 'HOURS')
     }
@@ -8,7 +8,6 @@ pipeline {
             steps {
                 script {
                     git branch: "master",
-                        credentialsId: 'my-credentials',
                         url: 'https://github.com/ma1456/python.git'
                 }
             }
