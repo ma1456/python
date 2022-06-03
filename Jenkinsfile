@@ -20,17 +20,11 @@ pipeline {
                 }
             }
         }
-        stage('Static Code Checking') {
-            steps {
-                script {
-                    sh 'find . -name \\*.py | xargs pylint -f parseable | tee pylint.log'
-                }
-            }
-        }
+        
         stage('Running Unit tests') {
             steps {
                 script {
-                    sh 'pytest --with-xunit --xunit-file=pyunit.xml --cover-xml --cover-xml-file=cov.xml tests/*.py || true'
+                    sh 'python3 -m unit test test_test1.py'
                     junit "pyunit.xml"
                 }
             }
