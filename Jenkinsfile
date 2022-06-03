@@ -1,6 +1,6 @@
 pipeline {
     agent { label'JDK8' }
-}
+    }
     stages {
         stage('Checkout project') {
             steps {
@@ -34,5 +34,5 @@ pipeline {
             }
         }
     }
-    
+}    
         
