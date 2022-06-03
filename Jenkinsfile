@@ -24,7 +24,7 @@ pipeline {
         stage('Running Unit tests') {
             steps {
                 script {
-                    sh 'python -m unit test test_test1.py'
+                    sh 'python3 -m unit test test_test1.py'
                     junit "pyunit.xml"
                 }
             }
