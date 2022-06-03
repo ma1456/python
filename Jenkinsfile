@@ -1,5 +1,7 @@
 pipeline {
     agent { label'JDK8' }
+    options { 
+        timeout(time: 1, unit: 'HOURS')
     }
     stages {
         stage('Checkout project') {
